@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Node (if experiments use it)
+node_modules/
+
+# Python (if experiments use it)
+__pycache__/
+*.pyc
+.venv/
