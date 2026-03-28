@@ -17,7 +17,7 @@ description: AIエージェント関連の最新情報を収集・要約し、�
 - トピック指定 (`/catch-up MCP`) → そのキーワードで追加検索
 - エージェント指定 (`/catch-up cursor`, `/catch-up copilot`) → 該当エージェントの検索クエリに切り替え
 
-追加の引数: `$ARGUMENTS`
+追加の引数: $ARGUMENTS
 
 ## デフォルト検索クエリ（Claude）
 
