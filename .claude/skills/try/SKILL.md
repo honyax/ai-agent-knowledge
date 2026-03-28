@@ -8,7 +8,7 @@ description: エントリの内容を実際に試し、実験コードと結果�
 
 ## 引数
 
-`$ARGUMENTS` にはエントリファイルのパス、またはトピック名が渡される。
+$ARGUMENTS にはエントリファイルのパス、またはトピック名が渡される。
 例: `/try entries/2026-03-24.md` または `/try Claude Code hooks`
 
 ## やること
