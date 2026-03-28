@@ -1,12 +1,12 @@
 ---
 date: 2026-03-24
-status: unread
+status: tried
 relevance: S
 tags: [claude-code, bare-flag, scripting, automation, effort]
 source_urls:
   - https://github.com/anthropics/claude-code/releases
   - https://releasebot.io/updates/anthropic/claude-code
-experiment_dir: null
+experiment_dir: experiments/2026-03-24-bare-flag-effort
 ---
 
 # Claude Code `--bare` フラグ & スキルの `effort` フロントマター
@@ -36,5 +36,10 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /review コマンドで自動生成、または手動で記入 -->
+### v2.1.86 で再検証（2026-03-29）
 
+**`--bare` フラグ**: v2.1.86 で正式実装を確認。ただし設計上 OAuth/keychain を意図的にスキップするため、`ANTHROPIC_API_KEY` 環境変数が必須。GitHub Actions のシークレットに API キーを設定すれば、ナレッジ収集の自動実行に使える。
+
+**`effort` フロントマター**: v2.1.84 から正式サポート。スキル・スラッシュコマンドの両方で使える。VS Code 拡張機能の警告は誤検知（スキーマ未更新）で実動作には影響なし。`/status` スキルに `effort: low` を適用済み。
+
+詳細: [experiments/2026-03-24-bare-flag-effort/2026-03-24-bare-flag-effort.md](../experiments/2026-03-24-bare-flag-effort/2026-03-24-bare-flag-effort.md)

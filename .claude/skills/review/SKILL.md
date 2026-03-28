@@ -1,6 +1,7 @@
 ---
+name: review
 allowed-tools: Read, Write, Bash, Grep, Glob
-argument-hint: [entry-file-or-all]
+argument-hint: "entry-file-or-all"
 description: 実践結果から感想・考察ノートを自動生成する
 ---
 
