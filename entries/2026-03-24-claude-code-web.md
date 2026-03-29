@@ -78,3 +78,5 @@ Plan Mode でローカル設計 → `--remote` でリモート実装委譲 → `
 2. 簡単なタスク（README修正等）で動作確認
 3. `--remote` での並列実行を体験
 
+CLIの --remote オプションから本ファイルへの追記を実施。claude auth login で認証を更新することで --remote が使用可能になることを確認した。
+
