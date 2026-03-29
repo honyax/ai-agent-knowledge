@@ -9,7 +9,6 @@ AIコーディングエージェント・AI開発ツール関連の情報をキ�
 
 ### スキルセット
 - ゲーム開発20年（Unity, C#, TypeScript）
-- 現在のプロジェクト: 1v1オンラインカードバトルゲーム（Unity + NGO + UGS）
 - AI開発ツール: Claude Code, GitHub Copilot を日常的に使用
 - Blender MCP連携でのプロシージャル3D制作経験あり
 - Web開発: React/TypeScript（学習中）
