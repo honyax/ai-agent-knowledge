@@ -1,12 +1,12 @@
 ---
 date: 2026-03-24
-status: unread
+status: tried
 relevance: S
 tags: [claude-code, channels, mcp, telegram, discord, remote]
 source_urls:
   - https://code.claude.com/docs/en/channels
   - https://venturebeat.com/orchestration/anthropic-just-shipped-an-openclaw-killer-called-claude-code-channels
-experiment_dir: null
+experiment_dir: experiments/2026-03-24-claude-code-channels
 ---
 
 # Claude Code Channels — Telegram/DiscordからClaude Codeセッションを操作可能に
@@ -38,5 +38,16 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+詳細は [experiments/2026-03-24-claude-code-channels/2026-03-24-claude-code-channels.md](../experiments/2026-03-24-claude-code-channels/2026-03-24-claude-code-channels.md) 参照。
 
+**Chat bridge としての評価: 期待外れ**
+スマホから Claude Code を操作したいという動機で試したが、Discord を経由するのが面倒で、出力も見えず Allow / Deny しか選択できない。Remote Control（claude.ai モバイルアプリ）で同じことができるため、Chat bridge としての Channels に独自のメリットはほぼない。
+
+**Webhook receiver が本命**
+CI/CD 失敗通知を Claude Code セッションに直接届けて自律修正させるユースケースが Channels の真価。GitHub Actions が Discord に投稿 → ローカルの Discord プラグインが受信 → 同一セッション（文脈あり）で Claude が修正対応、というループが実現できる。ローカルマシンに inbound ポートを開けずに済む点も重要。
+
+**制約は合理的な設計意図あり**
+`--channels` の明示的オプトインは「常時起動デーモンにしない」安全設計。Discord 経由はローカルを外部に晒さないアーキテクチャ上の必然。不便さではなく意図的な制約。
+
+**理想との差分**
+CI ループを人間不在で完全自動化したいが、Channels は「人間が許可した上で自律実行」という設計思想。完全自動ループは Claude Code on the Web や将来の GitHub Actions 直接統合が担う方向性。
