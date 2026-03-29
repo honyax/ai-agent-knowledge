@@ -1,13 +1,13 @@
 ---
 date: 2026-03-29
-status: unread
+status: tried
 relevance: S
 tags: [claude-code, mcp, tool-search, lazy-loading, token-optimization, context-window]
 source_urls:
   - https://www.atcyrus.com/stories/mcp-tool-search-claude-code-context-pollution-guide
   - https://medium.com/@joe.njenga/claude-code-just-cut-mcp-context-bloat-by-46-9-51k-tokens-down-to-8-5k-with-new-tool-search-ddf9e905f734
   - https://venturebeat.com/orchestration/claude-code-just-got-updated-with-one-of-the-most-requested-user-features
-experiment_dir: null
+experiment_dir: experiments/2026-03-29-mcp-tool-search
 ---
 
 # MCP Tool Search: ツール定義の遅延読み込みでトークン使用量85%削減
@@ -51,4 +51,10 @@ MCP サーバーを複数使っている環境ではコンテキスト圧迫が�
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+実施日: 2026-03-29 / 詳細: [実験ログ](../experiments/2026-03-29-mcp-tool-search/2026-03-29-mcp-tool-search.md)
+
+**良かった点**: 設定変更ゼロで既に有効。しかもこのセッション自体がその証拠で、システムプロンプトに "deferred tools via ToolSearch" と明記されていた。理解と確認が同時に完了した。
+
+**自分のワークフローへの適用**: Blender MCP や discord プラグインを同時使用する場面でコンテキスト節約の恩恵を受けられる。特に意識しなくてよいが、「ツールが遅延ロードされる」ことを知っておくと、ToolSearch が呼ばれるタイミングへの理解が深まる。
+
+**次のアクション**: 特になし。Blender MCP を接続したセッションで以前よりコンテキストが圧迫されなくなっているか体感で確認する程度でよい。

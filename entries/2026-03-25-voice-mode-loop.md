@@ -1,13 +1,13 @@
 ---
 date: 2026-03-25
-status: unread
+status: tried
 relevance: S
 tags: [claude-code, voice-mode, loop, cron, background-worker, productivity]
 source_urls:
   - https://code.claude.com/docs/en/changelog
   - https://releasebot.io/updates/anthropic/claude-code
   - https://help.apiyi.com/en/claude-code-2026-new-features-loop-computer-use-remote-control-guide-en.html
-experiment_dir: null
+experiment_dir: experiments/2026-03-25-voice-mode-loop
 ---
 
 # Claude Code Voice Mode & /loop コマンド — 2026年3月の目玉機能
@@ -40,4 +40,12 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+実施日: 2026-03-29 / 詳細: [実験ログ](../experiments/2026-03-25-voice-mode-loop/2026-03-25-voice-mode-loop.md)
+
+**良かった点**: `/loop` が `CronCreate/CronList/CronDelete` ツールで実装されていることが判明。`CronList` を実際に呼んで動作確認できた。`/loop 6h /catch-up` はこのリポジトリで今すぐ使える形になっている。
+
+**微妙な点**: `/loop` は「セッション中のみ有効」なので PC をシャットダウンすると止まる。常時稼働の定期収集には `schedule` スキル（RemoteTrigger）の方が向いている。
+
+**`/voice` 実機検証結果（2026-03-29）**: Windows ターミナルで実際に試したが、音声認識バックエンドが未動作で文字起こしされなかった。`claude install`（npm版→ネイティブバイナリ移行）でマイク権限は解消されたが、認識自体は動かず。段階的ロールアウト中のため現時点では実用不可。代替として `Win+H`（Windows標準音声入力）がターミナル入力欄でそのまま使える。
+
+**次のアクション**: `/loop 6h /catch-up` を実際のセッション中に試す。`/voice` はロールアウト完了後に再確認。
