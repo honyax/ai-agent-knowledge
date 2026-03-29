@@ -1,4 +1,5 @@
 ---
+name: status
 allowed-tools: Read, Bash, Grep, Glob
 description: ナレッジベースの状態を一覧表示する（未読数、実践待ち、週次サマリー）
 effort: low
