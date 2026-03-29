@@ -1,6 +1,6 @@
 ---
 date: 2026-03-24
-status: unread
+status: tried
 relevance: S
 tags: [claude-code, web, remote, teleport, cloud, parallel]
 source_urls:
@@ -62,5 +62,19 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+実験ファイル: [experiments/2026-03-24-claude-code-web/2026-03-24-claude-code-web.md](../experiments/2026-03-24-claude-code-web/2026-03-24-claude-code-web.md)
+
+**良かった点**
+`--remote` で複数タスクを並列起動し、完了後に `/teleport` でローカルに引き継ぐフローは、Unity 開発の合間にバックグラウンドタスクを走らせるワークフローとして理想的。モバイルからタスク投入できる点も魅力。
+
+**微妙な点・制限**
+GitHub 限定なのは今のところ問題ないが、Unity のビルド確認が VM 上でできないのでコンパイルエラーの検出程度に留まる。レート制限の共有は並列実行しすぎると枯渇リスクあり。
+
+**ワークフローへの適用**
+Plan Mode でローカル設計 → `--remote` でリモート実装委譲 → `/teleport` でレビュー・マージ、という分業フローが即実践できる。試す価値 S 級。
+
+**次のアクション**
+1. 対象リポジトリに Claude GitHub App をインストール
+2. 簡単なタスク（README修正等）で動作確認
+3. `--remote` での並列実行を体験
 
