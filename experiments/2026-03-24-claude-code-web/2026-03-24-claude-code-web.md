@@ -56,9 +56,9 @@ claude --remote "Add XML documentation to public methods in GameManager.cs"
 ```
 
 確認ポイント:
-- [ ] 複数コマンドが独立したセッションとして並列起動するか
-- [ ] claude.ai/code のダッシュボードでセッション一覧が見えるか
-- [ ] レート制限の消費量（他の Claude 使用と共有）
+- [x] 複数コマンドが独立したセッションとして並列起動するか → OK（2セッション同時起動を確認）
+- [x] claude.ai/code のダッシュボードでセッション一覧が見えるか → OK
+- [x] レート制限の消費量（他の Claude 使用と共有）→ claude.ai 設定→使用量で全体の消費率は確認可能。ただし --remote 分の内訳は不明
 
 ---
 
@@ -67,14 +67,20 @@ claude --remote "Add XML documentation to public methods in GameManager.cs"
 ウェブセッションの作業をローカルに持ってくる:
 
 ```
-ウェブ UI 上で: /teleport
+ウェブ UI 上で: /teleport（動作しない場合あり）
 または: /tp
 ```
 
+CLIから実行する場合（こちらの方が確実）:
+```bash
+claude --teleport <session_id>
+# session_id は --remote 実行時の出力に含まれる
+```
+
 引き継ぎ後の動作確認:
-- [ ] ブランチが自動チェックアウトされるか
-- [ ] 会話履歴が復元されるか
-- [ ] 追加の修正をローカルで続けられるか
+- [x] ブランチが自動チェックアウトされるか → OK（`claude --teleport <session_id>` で確認）
+- [x] 会話履歴が復元されるか → OK
+- [x] 追加の修正をローカルで続けられるか → OK
 
 ---
 
@@ -126,3 +132,21 @@ Unity 開発中に別端末（スマホ）から:
 - なお、このファイル自体が Claude Code Web によって更新された（Step 1-2 の「実施済み」注記）
 
 **次のステップ**: Step 2 — ターミナルから `claude --remote` での並列実行
+
+### 2026-03-29 — Step 2 & 3: `--remote` 並列実行 & teleport
+
+**トラブル: `--remote` が動作しなかった原因**
+- `claude auth status` で `subscriptionType: null` になっていた
+- `claude auth login`（`claude login` ではなく）で再認証したところ `subscriptionType: "pro"` になり解決
+- 認証トークンの期限切れが原因と思われる
+
+**`--remote` の動作**
+- コマンド実行後すぐにターミナルが返ってくる（ノンブロッキング）
+- 2つのセッションを同時起動し、独立したセッションとして並列動作することを確認
+- タスクの指示が曖昧だとウェブUIで確認ダイアログが出る → 具体的な指示で自律実行される
+- セッションID と View URL が出力されるので、ウェブで進捗確認可能
+
+**teleport の動作**
+- ウェブUIからの `/teleport` コマンドは動作しなかった
+- `claude --teleport <session_id>` でブランチのローカルチェックアウトを確認
+- 会話履歴の復元・ローカルでの続き作業はいずれも確認済み
