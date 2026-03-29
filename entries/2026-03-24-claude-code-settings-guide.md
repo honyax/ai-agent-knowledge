@@ -1,6 +1,6 @@
 ---
 date: 2026-03-24
-status: unread
+status: tried
 relevance: S
 tags: [claude-code, settings, claude-md, hooks, skills, mcp, permissions]
 source_urls:
@@ -49,5 +49,13 @@ Claude Codeの設定を体系的に理解・整備するための決定版ガイ
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+実験ファイル: [experiments/2026-03-24-claude-code-settings-guide/](../experiments/2026-03-24-claude-code-settings-guide/2026-03-24-claude-code-settings-guide.md)
+
+**良かった点**: 7レイヤーという整理軸があることで、何が設定されていて何が欠けているかを一目で把握できた。「黄金律」という基準を適用しようとすること自体が、CLAUDE.mdの内容を批判的に見直す良い機会になった。
+
+**気づき（黄金律の解釈について）**: 「コードから読み取れるものは書かない」という原則を機械的に適用すると、ディレクトリ構成やステータス管理の説明も削除候補になる。しかしこのリポジトリでは「AIが読み取れるか」よりも「AIが文脈を理解するコスト」を重視すべきと判断した。黄金律は「コストゼロで読み取れる情報は書かない」と解釈するのが正確かもしれない。
+
+**実施した変更**: settings.local.json から特定パス指定の許可残骸6件を削除。残骸が蓄積しやすい構造なので、定期的な棚卸しが必要。
+
+**次のアクション**: Hooks と .claude/rules/ は今後のワークフロー拡張時に検討。特に `catch-up` を自動化する際は Hooks が有効になりそう。
 
