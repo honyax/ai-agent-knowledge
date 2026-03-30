@@ -46,11 +46,20 @@ ls entries/ | grep -oP '^\d{4}-\d{2}-\d{2}' | sort | tail -1
 
 以下のクエリに `after:LAST_DATE` を付与して実行する:
 
+### 英語（公式・海外メディア）
+
 - `Anthropic Claude release changelog after:LAST_DATE`
 - `Claude Code new features update after:LAST_DATE`
 - `Anthropic MCP update after:LAST_DATE`
 - `Claude API changes new model after:LAST_DATE`
 - `Anthropic blog announcement after:LAST_DATE`
+
+### 日本語（Qiita / Zenn / Note）
+
+- `Claude Code site:qiita.com after:LAST_DATE`
+- `Claude Code site:zenn.dev after:LAST_DATE`
+- `Anthropic Claude site:note.com after:LAST_DATE`
+- `Claude Code 使い方 実践 after:LAST_DATE`
 
 ## エージェント別検索クエリ（引数に応じて切り替え）
 
