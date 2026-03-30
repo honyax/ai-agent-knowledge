@@ -1,11 +1,11 @@
 ---
 date: 2026-03-24
-status: unread
+status: read
 relevance: A
 tags: [claude-code, security, supply-chain, backdoor, oss]
 source_urls:
   - https://qiita.com/NF0000/items/66510f959b1c22f011a7
-experiment_dir: null
+experiment_dir: experiments/2026-03-24-claude-code-security-risk
 ---
 
 # Claude Codeのセキュリティリスク検証 — 悪意あるOSSパッケージの自動採用問題
@@ -46,5 +46,13 @@ Claude Codeを日常的に使う開発者として知っておくべきリスク
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+**良かった点**: 攻撃ベクトルが具体的（fake-loggerパターン）で理解しやすく、「なぜセーフガードが効かないか」の仕組みが明快。
+
+**微妙な点**: 記事はnpm前提なのでC#/NuGetへの適用は自分で検証が必要。採用率100%という数字は実験条件次第な面もある。
+
+**ワークフローへの適用**: Claude Codeに外部コードを渡す前に `npm audit` / `dotnet list package --vulnerable` を実行する習慣をつける。CLAUDE.mdに「外部パッケージ追加前は確認を求めよ」と追記するのも有効な防御になりそう。
+
+**次のアクション**: 既存プロジェクトで脆弱性スキャンを一度走らせる。
+
+→ [実験ノート](../experiments/2026-03-24-claude-code-security-risk/2026-03-24-claude-code-security-risk.md)
 

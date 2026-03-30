@@ -1,12 +1,12 @@
 ---
 date: 2026-03-25
-status: unread
+status: read
 relevance: A
 tags: [opus-4.6, api, adaptive-thinking, compaction, fast-mode, model-retirement]
 source_urls:
   - https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-6
   - https://platform.claude.com/docs/en/release-notes/overview
-experiment_dir: null
+experiment_dir: experiments/2026-03-25-opus-46-api-updates
 ---
 
 # Claude Opus 4.6 & API主要アップデート（Compaction, Fast Mode, モデル廃止）
@@ -37,4 +37,12 @@ Adaptive Thinkingはゲーム内AIの応答品質とコストのバランス調�
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+**良かった点**: Adaptive Thinkingとeffort GAは即使える。旧モデル廃止情報が明確で移行先も明示されているのは助かる。1Mコンテキストの標準価格化はコスト面で朗報。
+
+**微妙な点**: Fast Mode ($30/$150 per MTok) はゲーム内リアルタイム用途には高すぎる。開発・バッチ処理限定の機能になりそう。
+
+**ワークフローへの適用**: Compactionは長時間RPGセッションのNPC対話に活用できる。まず廃止モデルIDの移行対応が必要。なお、会社では `claude-opus-4-6` を継続使用中（2026-03-30確認）。
+
+**次のアクション**: コードベースで `claude-3-7-sonnet-20250219` / `claude-3-5-haiku-20241022` を検索して移行する。
+
+→ [実験ノート](../experiments/2026-03-25-opus-46-api-updates/2026-03-25-opus-46-api-updates.md)
