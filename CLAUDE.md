@@ -49,6 +49,6 @@ templates/        # エントリのテンプレート
 
 フロー:
 ```
-unread ──→ read     （読むだけでOK）
-       └─→ pending  （実践したい）→ tried
+unread → read     （読むだけでOK、完了）
+              └─→ pending  （実践したい）→ tried
 ```
