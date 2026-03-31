@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-status: unread
+status: read
 relevance: S
 tags: [claude-code, context-window, compaction, workflow, tips]
 source_urls:
@@ -62,4 +62,4 @@ CLAUDE.md の書き方と `/compact` のタイミングをすぐ見直せる。
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+自分のワークフローでは既にこの問題を回避できている。大方針はスキルファイルに記載しているため毎回参照され圧縮の影響を受けない。個別の実装方針は実装計画書に記載し、変更があれば随時追記・修正する運用にしているため、コンテキスト内の会話が圧縮されても方針が消えるという問題は起こらない。特に対策は不要。
