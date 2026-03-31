@@ -42,6 +42,13 @@ templates/        # エントリのテンプレート
 
 各エントリのYAMLフロントマターで管理:
 - `status: unread` - 未読（自動生成直後）
-- `status: read` - 読了（要約を確認済み）
+- `status: read` - 読了・完了（読むだけでOK、これ以上やることなし）
+- `status: pending` - 読了・実践待ち（内容確認済み、試したいもの）
 - `status: tried` - 実践済み
 - `status: archived` - アーカイブ（スキップ含む）
+
+フロー:
+```
+unread ──→ read     （読むだけでOK）
+       └─→ pending  （実践したい）→ tried
+```

@@ -1,6 +1,6 @@
 ---
 date: YYYY-MM-DD
-status: unread
+status: unread  # unread | read | pending | tried | archived
 relevance: S/A/B/C
 tags: []
 source_urls: []
