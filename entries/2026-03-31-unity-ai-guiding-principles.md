@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-status: unread
+status: read
 relevance: A
 tags: [unity, unity-ai, policy, copyright, data, ethics]
 source_urls:
@@ -62,4 +62,4 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+エントリ内容をざっくり確認。Unity AI を商用利用する際のデータポリシー・著作権責任の所在をまとめたガイドラインが存在するという理解。「Improve Unity AI」はデフォルトOFF、生成アセットにメタデータが付与される、最終的な権利確認は開発者責任、という3点が要点。実際に Unity AI を使い始めるタイミングで公式ガイドライン原文を一読する。
