@@ -1,6 +1,6 @@
 ---
 date: 2026-03-24
-status: unread
+status: read
 relevance: A
 tags: [claude-code, automation, workflow, mcp, non-coding, opus-46]
 source_urls:
@@ -46,5 +46,5 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+コーディングに限らず何にでもAIエージェントを活用しろ、という内容。実際このナレッジベースの情報収集自体も Claude Code で自動化しており、すでに実践できている。PLAN/SPEC/TODO/KNOWLEDGEフレームワークは参考になるが、まずは今のワークフローを続けながら必要に応じて取り入れる程度でよい。
 
