@@ -1,6 +1,6 @@
 ---
 date: 2026-03-28
-status: unread
+status: read
 relevance: A
 tags: [claude-code, subagent, mcp, multi-agent, architecture, best-practices]
 source_urls:
@@ -35,4 +35,4 @@ Claude Codeの日常利用で、サブエージェントの使い分け（Explor
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+ソースがWinBuzzer記事1本で詳細は薄め。関連動画は登録が必要でまだ未視聴。ただしboris-cherny-workflowで読んだ内容と合わせると骨格（オーケストレーター＋ワーカー、並列実行、MCPをツール共有レイヤーとして使う）は把握できた。Explore/Plan等のサブエージェントをClaude Codeが自動使い分けする体験がすでにあるので、その延長の理解でよい。
