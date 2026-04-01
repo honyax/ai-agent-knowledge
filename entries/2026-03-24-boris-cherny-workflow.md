@@ -1,6 +1,6 @@
 ---
 date: 2026-03-24
-status: unread
+status: read
 relevance: A
 tags: [claude-code, workflow, parallel, opus, plan-mode, boris-cherny]
 source_urls:
@@ -44,5 +44,9 @@ CLAUDE.mdのGit管理・ミスのルール化は即実践可能。並列実行�
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+並列開発は普段の業務でも実践済み。気になったのは「Claude Codeが入力待ちになるとOS通知が飛ぶ」という部分で、Hookの `Notification` イベントを使えばWindowsでも実現できる（PowerShellでトースト通知）。VSCode拡張経由でも同じHook設定が有効なはず。
+
+ルーチン作業のスラッシュコマンド化は、現在は Agent Skills（`.claude/skills/`）が推奨。このナレッジベース自体も `/status` や `/try` をSkillsで実装しており実践済み。
+
+サブエージェントについては「Claude Codeが自律的に生成・活用する」イメージだったが、`.claude/agents/` 配下にMarkdownでルールを定義することで、役割を持ったカスタムエージェント（レビュー担当・テスト担当等）を事前に用意しておくことも出来る。Skillsはユーザーが起動、Agentsは Claude が自律的に spawn という役割分担。
 
