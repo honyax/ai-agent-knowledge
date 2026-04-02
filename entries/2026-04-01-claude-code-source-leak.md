@@ -1,6 +1,6 @@
 ---
 date: 2026-04-01
-status: unread
+status: tried
 relevance: S
 tags: [claude-code, security, incident]
 source_urls:
@@ -56,4 +56,12 @@ v2.1.88 の npm パッケージに JavaScript の source map ファイル（`.ma
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+詳細な実行ログ: [experiments/2026-04-01-claude-code-source-leak/](../experiments/2026-04-01-claude-code-source-leak/2026-04-01-claude-code-source-leak.md)
+
+**良かった点**: KAIROS（常時稼働バックグラウンドエージェント＋autoDream）の存在が確認できた。「指示待ちAI」から「自律的に整理・準備するAI」への進化が具体的な実装として存在しており、今後のリリースが楽しみ。
+
+**自分への影響**: 現在 v2.1.87 を使用中（流出版の直前）。Claude Code は単一バイナリなので axios 攻撃の影響範囲外。npm プロジェクトでは `plain-crypto-js` の存在チェックを習慣にしたい。
+
+**Unity × AI の文脈**: KAIROS のようなバックグラウンドエージェントが実用化されれば、UnityプロジェクトでAIがアイドル中にアセット分析や最適化提案を行うユースケースが現実的になる。
+
+**次のアクション**: `claude update` で v2.1.90 へアップデートする。npm publish するプロジェクトでは `.npmignore` の `*.map` 除外を確認する。
