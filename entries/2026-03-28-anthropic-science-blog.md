@@ -1,6 +1,6 @@
 ---
 date: 2026-03-28
-status: unread
+status: archived
 relevance: C
 tags: [anthropic, science, research, alignment, blog]
 source_urls:

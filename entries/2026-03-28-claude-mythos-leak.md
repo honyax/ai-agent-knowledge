@@ -1,6 +1,6 @@
 ---
 date: 2026-03-28
-status: unread
+status: archived
 relevance: B
 tags: [anthropic, mythos, model, leak, capybara, security]
 source_urls:

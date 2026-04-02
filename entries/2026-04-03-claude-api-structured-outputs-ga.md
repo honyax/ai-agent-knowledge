@@ -1,6 +1,6 @@
 ---
 date: 2026-04-03
-status: unread
+status: archived
 relevance: B
 tags: [claude-api, structured-outputs, message-batches, models-api]
 source_urls:

@@ -1,6 +1,6 @@
 ---
 date: 2026-03-24
-status: unread
+status: archived
 relevance: B
 tags: [anthropic, business, policy, claude-5, haiku-3-deprecation]
 source_urls:
