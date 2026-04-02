@@ -1,6 +1,6 @@
 ---
 date: 2026-03-26
-status: unread
+status: archived
 relevance: B
 tags: [mcp, agentic-ai-foundation, linux-foundation, governance, openai, anthropic]
 source_urls:

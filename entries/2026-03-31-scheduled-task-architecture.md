@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-status: unread
+status: archived
 relevance: B
 tags: [claude-code, scheduled-tasks, architecture, cloud, oauth]
 source_urls:

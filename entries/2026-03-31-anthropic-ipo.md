@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-status: unread
+status: archived
 relevance: C
 tags: [anthropic, business, ipo]
 source_urls:

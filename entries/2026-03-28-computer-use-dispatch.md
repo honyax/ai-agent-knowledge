@@ -1,6 +1,6 @@
 ---
 date: 2026-03-28
-status: unread
+status: archived
 relevance: B
 tags: [claude-ai, computer-use, dispatch, pro, max, desktop]
 source_urls:

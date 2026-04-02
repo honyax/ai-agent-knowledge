@@ -1,6 +1,6 @@
 ---
 date: 2026-04-01
-status: unread
+status: archived
 relevance: B
 tags: [mcp, ecosystem, anthropic]
 source_urls:

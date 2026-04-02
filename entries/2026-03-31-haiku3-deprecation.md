@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-status: unread
+status: archived
 relevance: B
 tags: [claude-api, model, deprecation, migration]
 source_urls:
