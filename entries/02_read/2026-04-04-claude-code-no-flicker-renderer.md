@@ -1,6 +1,6 @@
 ---
 date: 2026-04-04
-status: unread
+status: read
 relevance: S
 tags: [claude-code, terminal, rendering, performance, v2.1.89, v2.1.90]
 source_urls:

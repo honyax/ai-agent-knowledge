@@ -1,6 +1,6 @@
 ---
 date: 2026-04-01
-status: unread
+status: read
 relevance: S
 tags: [claude-code, claude-md, workflow, best-practices]
 source_urls:
