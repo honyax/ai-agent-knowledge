@@ -1,6 +1,6 @@
 ---
 date: 2026-04-01
-status: unread
+status: read
 relevance: A
 tags: [claude-code, api, analytics, team]
 source_urls:

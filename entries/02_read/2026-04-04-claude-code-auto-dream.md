@@ -1,6 +1,6 @@
 ---
 date: 2026-04-04
-status: unread
+status: read
 relevance: A
 tags: [claude-code, memory, auto-dream, auto-memory, workflow]
 source_urls:

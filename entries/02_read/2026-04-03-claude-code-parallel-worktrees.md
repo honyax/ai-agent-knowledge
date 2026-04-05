@@ -1,6 +1,6 @@
 ---
 date: 2026-04-03
-status: unread
+status: read
 relevance: A
 tags: [claude-code, workflow, parallel, git-worktrees, productivity]
 source_urls:
@@ -70,5 +70,33 @@ cd ../project-feature-b && claude
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+### Git Worktreeの理解メモ
+
+**worktreeとcheckoutの違い**
+
+`git checkout` は同じディレクトリのファイルを上書きするため、同時に1ブランチしか扱えない。worktreeは作業ディレクトリを別フォルダに増やす仕組みで、複数ブランチのファイルに同時アクセスできる。
+
+**worktreeと別cloneの違い**
+
+実用上のワークフローはほぼ同じだが、内部構造が根本的に異なる。
+
+- clone: `.git`オブジェクトストア（全履歴・全データ）を丸ごとコピーする
+- worktree: `.git`オブジェクトストアを共有し、作業ディレクトリだけを別フォルダに展開する
+
+worktreeの新フォルダに置かれる `.git` はディレクトリではなく、メインの `.git` へのパスを書いたテキストファイル（ポインタ）。各worktree固有の状態（HEADとindex）は `.git/worktrees/<name>/` に保存される。
+
+このためworktreeの作成はほぼ瞬時でネットワーク不要。追加ディスク消費は作業ファイル分のみ。
+
+**ブランチ間のデータ共有**
+
+- コミット済みの変更: `.git`オブジェクトが共有されているため、プッシュなしでworktree間でマージ可能
+- 未コミットの変更（編集中・stash済み含む）: 各worktreeの作業ディレクトリに閉じており、他のworktreeには一切反映されない
+
+**主なユースケース**
+
+フィーチャー開発中に割り込みホットフィックスが入った場合など、「作業を中断・退避（stash）せずに別ブランチの作業を並行して始める」場面が典型。stashやWIPコミットという中断の手間をなくすのが主な恩恵。
+
+**Unityプロジェクトでの注意**
+
+worktreeを別Unityプロジェクトとして開くことは可能（Unity Hubで複数登録）。ただし `Library/` は各worktreeに独立して生成されるため、初回起動時にフルインポートが走る。同時起動も可能だがスペック次第。cloneとの優位差はディスク節約程度で、ワークフロー体験は大きく変わらない。
 
