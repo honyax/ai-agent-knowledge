@@ -1,13 +1,13 @@
 ---
 date: 2026-04-03
-status: unread
+status: tried
 relevance: A
 tags: [claude-code, chrome, browser-automation, workflow]
 source_urls:
   - https://claude.com/ja-jp/claude-for-chrome
   - https://code.claude.com/docs/en/chrome
   - https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome
-experiment_dir: null
+experiment_dir: experiments/2026-04-03-claude-for-chrome
 ---
 
 # Claude for Chrome — Claude CodeからChromeブラウザを直接操作するChrome拡張機能（ベータ）
@@ -91,5 +91,21 @@ Save as CSV.
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+実施日: 2026-04-05  
+実験ファイル: [experiments/2026-04-03-claude-for-chrome/](../../experiments/2026-04-03-claude-for-chrome/2026-04-03-claude-for-chrome.md)
 
+**良かった点:**
+- ログイン済みセッションをそのまま使えるのが本当に便利で、Unity Asset Store の購入済みアセット87件を API トークン不要で全件取得できた。
+- `javascript_tool` でDOM操作・データ抽出・ボタンクリックまで全部できるので、SPA 相手でも柔軟に対応できた。
+
+**微妙だった点・制限:**
+- SPA（React）サイトでは `get_page_text` が不安定で、ページ遷移後に前ページのコンテンツが混在することがある。データ抽出は `javascript_tool` + `innerText` の正規表現パターンが安定していた。
+- public リポジトリの GitHub PR 取得はClaude for Chrome の強みが活かせず、`gh` コマンドで十分だと後から気づいた。ログイン必須・API 非公開のサイトに使うべき。
+
+**自分のワークフローへの適用:**
+- Unity Asset Store でのアセット管理（購入済み一覧の定期エクスポート、特定カテゴリの棚卸し）に使えそう。
+- localhost で動いている React/TypeScript の開発サーバーに対して、フォームバリデーションやUIの動作確認を自動化するのが最も直接的な活用先。
+
+**次のアクション:**
+- ローカル開発サーバー（React）への UI テスト自動化を実際に試す。
+- GraphQL エンドポイント（`/api/graphql/batch`）を直接叩いて全アセットを1リクエストで取得できるか検証する。
