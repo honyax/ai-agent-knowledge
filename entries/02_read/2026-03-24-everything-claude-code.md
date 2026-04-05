@@ -1,6 +1,6 @@
 ---
 date: 2026-03-24
-status: unread
+status: read
 relevance: A
 tags: [claude-code, settings, agents, skills, hooks, tdd, hackathon]
 source_urls:
@@ -48,5 +48,6 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
-
+- **commands / rules**: 現在は skills に統合されていく流れなので、このリポジトリの commands・rules カテゴリをそのまま採用するより、skills として設計し直す方が自分の運用に合う
+- **agents**: サブエージェント構成（レビュー・セキュリティ等）は参考になりそうで、別途試す予定
+- **hooks**: 確認ダイアログの表示や、処理完了時の通知など、UX改善に使いたい。イベント駆動の自動化という切り口で自分のワークフローに組み込む余地がある
