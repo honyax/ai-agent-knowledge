@@ -1,11 +1,16 @@
 ---
 date: 2026-04-04
-status: unread
+status: read
 relevance: B
 tags: [anthropic, policy, pentagon, legal, us-government]
 source_urls:
   - https://www.axios.com/2026/04/02/trump-administration-appeals-anthropic-pentagon
   - https://www.washingtonpost.com/business/2026/04/02/ai-pentagon-anthropic-claude-hegseth-trump/012f64be-2eb3-11f1-aac2-f56b5ccad184_story.html
+  - https://broadbandbreakfast.com/trump-administration-appeals-ruling-that-blocked-pentagon-action-against-anthropic/
+  - https://ledge.ai/articles/anthropic_pentagon_claude_military_safeguards_dispute
+  - https://cloud.watch.impress.co.jp/docs/column/techwatch/2091590.html
+  - https://www.bloomberg.com/jp/news/articles/2026-02-27/TB4QTJT9NJLU00
+  - https://www.businessinsider.jp/article/anthropic-openai-chatgpt-claude-katy-perry-pentagon-subscription-2026-3/
 experiment_dir: null
 ---
 
@@ -42,8 +47,13 @@ experiment_dir: null
 
 ## ソース
 
-- [Trump administration appeals Anthropic ruling - Axios](https://www.axios.com/2026/04/02/trump-administration-appeals-anthropic-pentagon)
-- [Trump administration appeals ruling that blocked Pentagon action against Anthropic - Washington Post](https://www.washingtonpost.com/business/2026/04/02/ai-pentagon-anthropic-claude-hegseth-trump/012f64be-2eb3-11f1-aac2-f56b5ccad184_story.html)
+- [Trump administration appeals Anthropic ruling - Axios](https://www.axios.com/2026/04/02/trump-administration-appeals-anthropic-pentagon)（要登録）
+- [Trump administration appeals ruling that blocked Pentagon action against Anthropic - Washington Post](https://www.washingtonpost.com/business/2026/04/02/ai-pentagon-anthropic-claude-hegseth-trump/012f64be-2eb3-11f1-aac2-f56b5ccad184_story.html)（要登録）
+- [Trump Administration Appeals Ruling Against Anthropic - Broadband Breakfast](https://broadbandbreakfast.com/trump-administration-appeals-ruling-that-blocked-pentagon-action-against-anthropic/)（無料・英語）
+- [米国防総省、Anthropicとの関係解消を検討 - Ledge.ai](https://ledge.ai/articles/anthropic_pentagon_claude_military_safeguards_dispute)（日本語）
+- [Anthropicと国防総省の決裂 問われるAI軍事利用の主導権 - クラウド Watch](https://cloud.watch.impress.co.jp/docs/column/techwatch/2091590.html)（日本語）
+- [軍事AI巡るアンソロピックと国防総省の対立 - Bloomberg Japan](https://www.bloomberg.com/jp/news/articles/2026-02-27/TB4QTJT9NJLU00)（日本語）
+- [国防総省に徹底抗戦したAnthropicのユーザー倍増 - Business Insider Japan](https://www.businessinsider.jp/article/anthropic-openai-chatgpt-claude-katy-perry-pentagon-subscription-2026-3/)（日本語）
 
 ---
 
