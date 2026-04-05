@@ -1,6 +1,6 @@
 ---
 date: 2026-03-30
-status: unread
+status: read
 relevance: A
 tags: [claude-code, scheduled-tasks, automation, cloud]
 source_urls:
@@ -80,4 +80,8 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+[2026-03-31-scheduled-task-architecture](../05_archived/2026-03-31-scheduled-task-architecture.md) と内容が被る部分がある。
+あちらは「Cloud Scheduled Tasks を実際に運用したら OAuth トークン失効とネットワーク制限でハマった」という続編で、本エントリの制約欄（ローカルファイル不可・GitHub のみ）の裏側を詳しく説明している。セットで読むと理解が深まるが、内容的には本エントリの補足という位置づけ。
+
+自分がこれを使うとしたら、このプロジェクトの catch-up を毎日自動実行して調査内容を git push する、くらいが現実的なユースケース。
+ただ、catch-up はローカルの MCP やツール類に依存している部分もあるため、クラウド側でどこまで再現できるか不明。当面は手動実行で十分なので、必要になったときに改めて検討する。

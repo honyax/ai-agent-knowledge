@@ -1,6 +1,6 @@
 ---
 date: 2026-03-29
-status: unread
+status: read
 relevance: A
 tags: [claude-api, compaction, context-management, infinite-conversation, opus-46]
 source_urls:
@@ -56,4 +56,8 @@ experiment_dir: null
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+「自動コンパクションはこれまでもあった」という疑問が生じたが、それは Claude Code（CLIツール）の話。今回変わったのは Claude API（生のAPIレイヤー）。
+
+これまでAPIを直接使う開発者は、コンテキスト上限への対応（古いメッセージの切り捨て、要約の挿入など）を自前実装する必要があった。`compact_20260112` パラメータ1つで、Claude Code が内部でやっていることと同等の処理をAPIが自動でやってくれるようになった、というのが本質的な変更点。
+
+ゲームへのClaude API統合を考えると実用的なメリットはあるが、今すぐ試すほどの優先度ではない。
