@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-status: unread
+status: todo
 relevance: A
 tags: [unity, unity-ai, game-dev, assistant, generators, sentis, mcp]
 source_urls:
@@ -23,7 +23,7 @@ experiment_dir: null
 ゲーム開発20年の立場から直接使える機能が揃っている。特に：
 - **Generators** でアセットのプロトタイプ生成を高速化できる（プレースホルダーの迅速な用意）
 - **Sentis** でゲーム内AIロジック（行動選択・アニメーション制御等）を端末上で動かせる
-- **Gateway** が正式公開されれば、既存の Claude Code + Unity MCP 連携をさらに堅牢・公式ルートで実現できる可能性がある
+- **Gateway** が正式公開されれば、既存の Claude Code + Unity MCP 連携（`com.unity.mcp` / `com.unity.ai.assistant` による公式MCP、実動作確認済み）をさらに堅牢・安定した形で拡張できる可能性がある
 
 ## 詳細
 
