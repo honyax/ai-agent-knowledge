@@ -1,6 +1,6 @@
 ---
 date: 2026-04-04
-status: unread
+status: read
 relevance: A
 tags: [claude-code, mcp, bedrock, changelog, security, vscode]
 source_urls:

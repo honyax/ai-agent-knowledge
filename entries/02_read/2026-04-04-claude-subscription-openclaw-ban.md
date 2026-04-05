@@ -1,6 +1,6 @@
 ---
 date: 2026-04-04
-status: unread
+status: read
 relevance: B
 tags: [anthropic, claude-code, subscription, openclaw, policy, third-party]
 source_urls:

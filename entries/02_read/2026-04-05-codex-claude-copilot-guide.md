@@ -1,6 +1,6 @@
 ---
 date: 2026-04-05
-status: unread
+status: read
 relevance: A
 tags: [claude-code, codex, github-copilot, workflow, agents-md, comparison]
 source_urls:

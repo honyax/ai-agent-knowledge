@@ -1,6 +1,6 @@
 ---
 date: 2026-04-03
-status: unread
+status: read
 relevance: B
 tags: [claude-code, automation, specification-driven-development, hooks, queue]
 source_urls:
