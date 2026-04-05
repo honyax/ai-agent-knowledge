@@ -1,6 +1,6 @@
 ---
 date: 2026-03-27
-status: unread
+status: read
 relevance: A
 tags: [claude-agent-sdk, multi-agent, harness-design, long-running, evaluator, playwright-mcp]
 source_urls:
@@ -73,4 +73,4 @@ Claude Agent SDKを使った実践的なマルチエージェント設計のリ�
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+Webベースのゲーム開発としては使えるようになってきた感じがするが、シンプルなWebベースのゲームを作らせるのにもまだ課題が多い。現状では数時間にわたる実装を任せたところで、動作確認をしたら多数の問題が出てくると思われる。Unityベースのゲーム開発を前提とするのであれば、まだ長時間のralph-loopを任せられる段階ではなさそう。将来的にモデルの改善が進み、Unityプロジェクト向けの安定したハーネス構成が確立されてきたタイミングで改めて検討する。
