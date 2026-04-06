@@ -1,6 +1,6 @@
 ---
 date: 2026-04-06
-status: unread
+status: read
 relevance: A
 tags: [claude-code, セキュリティ, サプライチェーン, プロンプト, axios, RAT]
 source_urls:

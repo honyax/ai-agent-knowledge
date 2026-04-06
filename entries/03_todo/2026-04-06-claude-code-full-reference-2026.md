@@ -1,6 +1,6 @@
 ---
 date: 2026-04-06
-status: unread
+status: todo
 relevance: A
 tags: [claude-code, リファレンス, 全機能, ベストプラクティス]
 source_urls:
@@ -35,6 +35,8 @@ Claude Codeは更新が非常に速く、数ヶ月前の記事では古くなっ
 1. 記事を一読してトップ10の機能をチェック
 2. 知らなかった機能を1〜2個ピックアップして実際に試す
 3. 日常ワークフローに組み込めるものがあれば `CLAUDE.md` や `settings.json` に反映
+
+**rewind 機能**: 機会があれば試したい。
 
 ## ソース
 
