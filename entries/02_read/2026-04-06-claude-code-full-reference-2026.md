@@ -1,6 +1,6 @@
 ---
 date: 2026-04-06
-status: todo
+status: read
 relevance: A
 tags: [claude-code, リファレンス, 全機能, ベストプラクティス]
 source_urls:
