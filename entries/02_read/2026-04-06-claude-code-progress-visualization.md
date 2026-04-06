@@ -1,6 +1,6 @@
 ---
 date: 2026-04-06
-status: unread
+status: read
 relevance: B
 tags: [claude-code, ワークフロー, 可視化, 開発体験, シーケンス図]
 source_urls:

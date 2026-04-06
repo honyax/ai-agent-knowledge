@@ -1,6 +1,6 @@
 ---
 date: 2026-04-06
-status: unread
+status: read
 relevance: B
 tags: [claude-api, 1m-context, 廃止, モデル移行, sonnet-4-6]
 source_urls:
@@ -49,4 +49,6 @@ Claude APIを使ったゲーム内AI統合を検討している立場として�
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+現在は Sonnet 4.6 と Opus 4.6 のみを利用しているため、この廃止は直接影響なし。
+古いモデル（Sonnet 4.5, Sonnet 4）への移行作業も不要。
+1Mコンテキストがベータヘッダー不要・標準価格になった点だけ覚えておけば十分。

@@ -47,19 +47,54 @@ experiment_dir: null
 - **現在の状態**: クローズドベータ（無料）
 - **価格**: GA に近づいた段階で発表予定
 
-### 2026 Beta の主な強化点
+### 2026 Beta の主な強化点（2026/01/13 リリース）
 
-- Assistant のエージェント機能向上（複数オブジェクトの一括処理など）
-- Generators の対応アセットタイプ拡張
-- Sentis の追加 API（Unity 6.3 でランタイム最適化向け API を公開予定）
+- **Agent モード** 追加：プロンプトに基づいてエディタ内のタスクを自律実行
+- **Orchestration** 追加：複雑な指示を複数ステップに分解し、最適なツール・サブエージェントに委譲
+- **3D Model Generator** 追加：テキストまたは参照画像から3Dメッシュを生成（props・キャラクター対応）
+- **UI Toolkit レイアウト生成** 追加：テキスト指示から UXML・USS を含む UI レイアウトを構築
+- シーン画像をビジョンモデルで解析する機能
+- パフォーマンス最適化の提案機能
+- コード生成の安全性向上
+- 旧 2025 Beta は 2026年1月12日で終了（旧ポイントは引き継がれない）
+
+### Assistant の3モード詳細
+
+| モード | 概要 |
+|--------|------|
+| `/ask` | プロジェクトを変更せずに Unity API・エディター情報を質問 |
+| `/run` | エディター内でタスクを自律実行（例：球体を30個円形に配置） |
+| `/code` | Unity API 準拠の C# スクリプトを構文チェック付きで生成 |
+
+### Generators の対応アセットタイプ
+
+- Texture / Sprite / Material / Sound / Animation（旧来から対応）
+- **3D Model**（Beta 2026 で追加）
+- **UI Toolkit レイアウト**（Beta 2026 で追加）
+
+生成アセットはプロジェクト内の `GeneratedAssets` フォルダに保存。Inspector の「Generate」ボタンで再編集可能。
+
+### セットアップ手順
+
+1. Unity Hub で Unity 6.3（6000.3）プロジェクトを作成
+2. プロジェクトを **Unity Cloud にリンク**（作成時にクラウドアイコンが表示される）
+3. エディター上部の **AI ボタン** から「Agree and install Unity AI」を選択
+4. インストール完了後、AI メニューから各機能を呼び出し
+
+### 料金
+
+- ベータ期間中は**無料**
+- GA 後は「Unity Points」購入制（有料プランに月次付与あり）
 
 ## 試すなら
 
 1. Unity Hub で Unity 6.3（6000.3）プロジェクトを用意する
-2. Editor の **AI メニュー** から Unity AI 機能にアクセス
-3. まず **Generators** でテクスチャやスプライトをプロンプトから生成してみる
-4. **Assistant** にシーン操作（オブジェクトの一括配置など）を指示して自律実行を確認
-5. Unity AI Gateway Beta の申し込みページで早期アクセスに登録する
+2. プロジェクトを Unity Cloud にリンクした状態でエディターを開く
+3. 上部の **AI ボタン** → 「Agree and install Unity AI」でインストール
+4. まず **Generators** でテクスチャやスプライトをプロンプトから生成してみる
+5. **Assistant の `/run` モード** にシーン操作（オブジェクトの一括配置など）を指示して自律実行を確認
+6. **3D Model Generator** で参照画像からプロトタイプメッシュを生成してみる
+7. Unity AI Gateway Beta の申し込みページで早期アクセスに登録する
 
 ## ソース
 
@@ -67,6 +102,8 @@ experiment_dir: null
 - [Unity AI（マニュアル）](https://docs.unity3d.com/6000.3/Documentation/Manual/unity-ai.html)
 - [Unity AI Beta 2026 is here!（Unity Discussions）](https://discussions.unity.com/t/unity-ai-beta-2026-is-here/1703625)
 - [Unity AI Gateway Early Access Beta](https://create.unity.com/UnityAIGatewayBeta)
+- [Unity AI Beta 2026 が提供開始（ゲームメーカーズ、2026/01/15）](https://gamemakers.jp/article/2026_01_15_128490/)
+- [Unityで生成AIを活用する方法・Unity AIの使い方（CG研究所）](https://cg-kenkyujo.com/unity-seisei-ai/)
 
 ---
 
