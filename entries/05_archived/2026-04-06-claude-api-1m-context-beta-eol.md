@@ -1,6 +1,6 @@
 ---
 date: 2026-04-06
-status: read
+status: archived
 relevance: B
 tags: [claude-api, 1m-context, 廃止, モデル移行, sonnet-4-6]
 source_urls:
