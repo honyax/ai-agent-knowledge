@@ -1,6 +1,6 @@
 ---
 date: 2026-04-08
-status: unread
+status: read
 relevance: B
 tags: [anthropic, new-model, cybersecurity, mythos]
 source_urls:

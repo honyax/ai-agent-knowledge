@@ -1,6 +1,6 @@
 ---
 date: 2026-04-08
-status: unread
+status: read
 relevance: C
 tags: [anthropic, business, infrastructure, google, tpu]
 source_urls:
