@@ -61,6 +61,13 @@ ls entries/*/ | grep -oP '^\d{4}-\d{2}-\d{2}' | sort | tail -1
 - `Anthropic Claude site:note.com after:LAST_DATE`
 - `Claude Code 使い方 実践 after:LAST_DATE`
 
+### X（ClaudeDevs アカウント）
+
+- `ClaudeDevs site:x.com after:LAST_DATE`
+- `ClaudeDevs Claude Code after:LAST_DATE`
+
+> 注意: X はクローラーを制限しているため、取得できない場合がある。ヒットしなくても正常。
+
 ## エージェント別検索クエリ（引数に応じて切り替え）
 
 ### cursor
