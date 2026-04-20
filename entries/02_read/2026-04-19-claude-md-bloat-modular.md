@@ -1,6 +1,6 @@
 ---
 date: 2026-04-19
-status: unread
+status: read
 relevance: A
 tags: [claude-code, claude-md, workflow, context-management]
 source_urls:
@@ -71,4 +71,10 @@ CLAUDE.mdが成長するにつれ、Claudeが重要な指示を無視するよ�
 
 ## 感想・考察
 
-<!-- /try 実行時に自動生成 -->
+このエントリを読んだ流れで rules と skills の使い分けについて整理できた。
+
+記事が言う `.claude/rules/` のモジュール分割は「CLAUDE.mdの整理術」であり、skills とは別物。混同しやすいが、**rules = 常時読み込まれる制約、skills = オンデマンドで呼び出す手順**という軸は公式ドキュメントにも明記されている（[Claude があなたのプロジェクトを記憶する方法](https://code.claude.com/docs/ja/memory)）。
+
+実運用上の判断基準は「すべての操作に常に守ってほしいか」の一点。コーディングスタイルや言語設定は rules、`/implement-plan` や `/catch-up` のようなワークフローは skills、という住み分けが明確になった。
+
+また、スキル内でモデルを使い分けたい場合（実装はSonnet、レビューはOpus等）は `Skill` ツールではなく `Agent` ツールを使って呼び出す必要がある。`Agent` ツールには `model` パラメータがあり、スキルのファイルを `@` 参照でプロンプトに渡す形が現実的な落としどころ。
