@@ -1,6 +1,6 @@
 ---
 date: 2026-04-19
-status: unread
+status: read
 relevance: S
 tags: [claude-code, changelog, cli, security, keyboard-shortcut]
 source_urls:
