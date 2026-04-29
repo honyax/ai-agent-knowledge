@@ -1,11 +1,11 @@
 ---
-name: status
+name: digest
 allowed-tools: Read, Bash, Grep, Glob
-description: ナレッジベースの状態を一覧表示する（未読数、実践待ち、週次サマリー）
+description: ナレッジベースの状態を一覧表示する（未読数、実践待ち、週次サマリー）。Claude Code ビルトインの /status とは別物
 effort: low
 ---
 
-# status: ナレッジベース状態確認
+# digest: ナレッジベース状態確認
 
 ## やること
 
