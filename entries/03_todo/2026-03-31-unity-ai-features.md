@@ -7,6 +7,7 @@ source_urls:
   - https://unity.com/ja/features/ai
   - https://docs.unity3d.com/6000.3/Documentation/Manual/unity-ai.html
   - https://discussions.unity.com/t/unity-ai-beta-2026-is-here/1703625
+  - https://www.youtube.com/live/luS73gjtGJ0
 experiment_dir: null
 ---
 
@@ -104,6 +105,7 @@ experiment_dir: null
 - [Unity AI Gateway Early Access Beta](https://create.unity.com/UnityAIGatewayBeta)
 - [Unity AI Beta 2026 が提供開始（ゲームメーカーズ、2026/01/15）](https://gamemakers.jp/article/2026_01_15_128490/)
 - [Unityで生成AIを活用する方法・Unity AIの使い方（CG研究所）](https://cg-kenkyujo.com/unity-seisei-ai/)
+- [【Unity自習室/3】 Unity AI を使ってみよう！ 【生配信】（YouTube）](https://www.youtube.com/live/luS73gjtGJ0)
 
 ---
 
