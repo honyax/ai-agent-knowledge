@@ -34,6 +34,14 @@ AIコーディングエージェント・AI開発ツール関連の情報をキ�
 
 - コミットメッセージ・PRのタイトル・本文はすべて日本語で記載する
 
+## シェルツールの優先順位
+
+- Bash tool を優先して使うこと。既存の許可リスト（permissions allow rules）が Bash 前提で構築されているため、PowerShell tool を使うと許可プロンプトが頻発する
+- PowerShell tool は以下の場合のみ使用可:
+  - Bash で実現できない PowerShell 固有の操作（Windows レジストリ、PSDrive、Get-* 系 cmdlet 等）
+  - ユーザーが明示的に PowerShell を指示した場合
+- `git`/`npm`/`node` 等の標準 CLI は Bash tool 経由で実行する
+
 ## ディレクトリ構成
 
 ```
