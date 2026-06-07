@@ -1,6 +1,6 @@
 ---
 date: 2026-06-02
-status: read
+status: todo
 relevance: A
 tags: [コスト最適化, コンテキストエンジニアリング, トークン圧縮, OSS, Claude-Code]
 source_urls:
@@ -61,5 +61,14 @@ Claude Codeのトークン課金は「使い込むほど高くなる」構造で
 - → 「統一されているから」ではなく「似た土台＋アダプタで差異吸収＋形式非依存のゴミを叩く」が正確な理解。
 
 ※ 実装の細部（アダプタ構成・wrap の挙動）は別途ソースコードで確認予定。
+
+### 実践メモ（2026-06-06 〜 調査中）
+
+Headroom のリポジトリをダウンロードしてソースコードを調査中。検証で確定させたい論点:
+
+1. **プロキシの仕組み**: `headroom wrap <agent>` が base_url 差し替え方式（client→localhost:8787 は平文/自前証明書、proxy→API は本物HTTPS で payload は構造上平文）か、`HTTPS_PROXY`＋CA証明書のMITM方式か。アダプタが各エージェント/APIをどう吸収しているか。
+2. **compaction への影響**: Headroom のトークン削減が Claude Code の compaction を遅らせるか。鍵は Claude Code が context fullness を (A) 自前のメッセージ集計 で測るか (B) API報告の `usage.input_tokens` で測るか。→ メーター挙動の観察＋ワイヤー傍受（[[2026-05-18-claude-code-internals-6-api-calls]] の手法）で切り分け。
+3. **サブスク Claude Code との相性**: `ANTHROPIC_BASE_URL` 差し替えは APIキー運用/ゲートウェイには素直だが、OAuth前提のサブスクでは噛みにくい懸念。検証は APIキー構成で行うのが安全。
+4. **削減率の実測**: 普段のデバッグ/リファクタリング1セッションで削減トークン数・コストの before/after を記録。CCR の可逆復元（MCP経由の原文取得）が実際に効くか。
 
 <!-- /try 実行時に自動生成 -->
