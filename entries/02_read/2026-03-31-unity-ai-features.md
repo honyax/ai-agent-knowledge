@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-status: todo
+status: read
 relevance: A
 tags: [unity, unity-ai, game-dev, assistant, generators, sentis, mcp]
 source_urls:
